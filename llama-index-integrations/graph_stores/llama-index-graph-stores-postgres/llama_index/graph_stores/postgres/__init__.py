@@ -1,4 +1,3 @@
-from llama_index.graph_stores.postgres.base import <FILL>
+from llama_index.graph_stores.postgres.base import PostgresGraphStore
 
-
-__all__ = ["<FILL>"]
+__all__ = ["PostgresGraphStore"]
