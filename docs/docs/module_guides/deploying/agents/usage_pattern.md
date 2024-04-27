@@ -64,6 +64,7 @@ query_engine_tools = [
             description="Provides information about Lyft financials for year 2021. "
             "Use a detailed plain text question as input to the tool.",
         ),
+        return_direct=False,
     ),
     QueryEngineTool(
         query_engine=uber_engine,
@@ -72,6 +73,7 @@ query_engine_tools = [
             description="Provides information about Uber financials for year 2021. "
             "Use a detailed plain text question as input to the tool.",
         ),
+        return_direct=False,
     ),
 ]
 
@@ -138,6 +140,10 @@ class MyAgentWorker(CustomSimpleAgentWorker):
 
     # define class here
     pass
+
+
+# Wrap the worker into an AgentRunner
+agent = MyAgentWorker(...).as_agent()
 ```
 
 Check out our [Custom Agent Notebook Guide](../../../examples/agent/custom_agent.ipynb) for more details.
